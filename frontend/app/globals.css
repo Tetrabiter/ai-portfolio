@@ -19,3 +19,8 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.authetication-text{
+  font-size: 24px;
+  font-weight: 600;
+}
