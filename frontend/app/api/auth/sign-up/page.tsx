@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
-import { FormData } from "../types/types";
+import { FormData } from "../../../types/types";
 
 const SignUp = () => {
     const [formData, setFormData] = useState<FormData>({ email: "", password: "" });
