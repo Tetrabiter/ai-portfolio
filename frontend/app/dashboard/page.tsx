@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import Logo from "../components/ui/Logo"
 import { useState } from "react"
 import {
   FiHome,
@@ -15,6 +15,7 @@ import {
   FiUpload,
   FiSend,
 } from "react-icons/fi"
+import { MdKeyboardVoice } from "react-icons/md";
 import Link from "next/link"
 
 export default function Dashboard() {
@@ -163,7 +164,7 @@ export default function Dashboard() {
               <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 rounded-md md:hidden">
                 <FiMenu className="h-6 w-6" />
               </button>
-              <h2 className="text-xl font-bold ml-2">CareerScribe</h2>
+              <Logo />
             </div>
             <div className="flex items-center space-x-4">
               <button className="p-2 bg-black text-white rounded-full hover:bg-opacity-75 duration-300">
@@ -206,6 +207,12 @@ export default function Dashboard() {
                 className="bg-black text-white rounded-full py-2 px-3 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-gray-200 duration-300"
               >
                 <FiSend className="h-5 w-5" />
+              </button>
+              <button
+                type="submit"
+                className="bg-black text-white rounded-full py-2 px-3 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-gray-200 duration-300"
+              >
+                <MdKeyboardVoice className="h-5 w-5"/>
               </button>
             </form>
           </div>

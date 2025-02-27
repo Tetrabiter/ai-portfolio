@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { FaGoogle } from "react-icons/fa";
+import { FaGoogle, FaLinkedinIn } from "react-icons/fa";
 import { FormData } from "../../../types/types";
+import { signIn } from "next-auth/react";
 
 const SignUp = () => {
     const [formData, setFormData] = useState<FormData>({ email: "", password: "" });
@@ -87,9 +88,20 @@ const SignUp = () => {
                         >
                             <p className="font-semibold">Submit</p>
                         </button>
-                        <button className="w-full flex justify-center p-4 rounded-md bg-black hover:bg-gray-800 duration-300 text-white font-medium focus:outline-none focus:ring-2 focus:ring-blue-300">
-                            <FaGoogle />
-                        </button>
+                        <div className='flex gap-3'>
+                            <button
+                                onClick={() => signIn('google')}
+                                className="w-full flex justify-center p-4 rounded-md bg-black hover:bg-gray-800 duration-300 text-white font-medium focus:outline-none focus:ring-2 focus:ring-blue-300"
+                            >
+                                <FaGoogle />
+                            </button>
+                            <button
+                                onClick={() => signIn('linkedin')}
+                                className="w-full flex justify-center p-4 rounded-md bg-black hover:bg-gray-800 duration-300 text-white font-medium focus:outline-none focus:ring-2 focus:ring-blue-300"
+                            >
+                                <FaLinkedinIn />
+                            </button>
+                        </div>
                     </div>
                 </form>
 

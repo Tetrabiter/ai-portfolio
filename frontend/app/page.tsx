@@ -4,8 +4,9 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { FaChevronDown, FaCheck, FaRocket, FaUserTie, FaClock, FaPlay, FaPause } from "react-icons/fa"
+import { FaCheck, FaRocket, FaUserTie, FaClock, FaPlay, FaPause } from "react-icons/fa"
 import Link from "next/link"
+import Logo from "./components/ui/Logo"
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'outline'
@@ -51,7 +52,7 @@ export default function LandingPage() {
       <header className="container mx-auto py-6">
         <nav className="flex justify-between items-center">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-2xl font-bold">CareerScribe</h1>
+            <Logo />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 20 }}

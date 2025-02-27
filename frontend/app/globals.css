@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,4 +25,10 @@ body {
 .authetication-text{
   font-size: 24px;
   font-weight: 600;
+}
+
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
 }
